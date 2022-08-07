@@ -5,7 +5,6 @@ import {
     Text,
     Link,
     VStack,
-    Code,
     Grid,
     theme,
 } from "@chakra-ui/react";
@@ -23,10 +22,6 @@ function App() {
                         <Text>
                             This is our starting Landing Page! We are going to
                             do something great!
-                        </Text>
-                        <Text>
-                            Edit <Code fontSize="xl">src/App.js</Code> and save
-                            to reload.
                         </Text>
                         <Link
                             color="teal.500"
