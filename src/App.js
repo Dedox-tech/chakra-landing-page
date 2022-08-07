@@ -20,7 +20,7 @@ function App() {
                     <VStack spacing={8}>
                         <Logo h="40vmin" pointerEvents="none" />
                         <Text>
-                            This is our starting Landing Page! We are going to
+                            This is our starting Landing Page. We are going to
                             do something great!
                         </Text>
                         <Link
