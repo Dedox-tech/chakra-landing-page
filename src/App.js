@@ -21,6 +21,10 @@ function App() {
                     <VStack spacing={8}>
                         <Logo h="40vmin" pointerEvents="none" />
                         <Text>
+                            This is our starting Landing Page! We are going to
+                            do something great!
+                        </Text>
+                        <Text>
                             Edit <Code fontSize="xl">src/App.js</Code> and save
                             to reload.
                         </Text>
