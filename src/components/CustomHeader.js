@@ -25,10 +25,10 @@ export default function CustomHeader() {
     return (
         <Container maxWidth={customMaxWidth} py={customPadding}>
             <Heading as="h1">Hello World! I am a heading.</Heading>
-            <Text my={5}>
+            <Text my={6} fontSize="lg">
                 What do you think about the Chakra UI components?
             </Text>
-            <Text mb={5} mt={2}>
+            <Text mb={6} mt={2} fontSize="lg">
                 This is our starting Landing Page. We are going to do something
                 great!
             </Text>
