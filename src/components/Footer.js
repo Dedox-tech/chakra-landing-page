@@ -149,11 +149,10 @@ export default function Footer() {
                     <ModalCloseButton />
                     <ModalBody>
                         <Text>
-                            Sit nulla est ex deserunt exercitation anim
-                            occaecat. Nostrud ullamco deserunt aute id consequat
-                            veniam incididunt duis in sint irure nisi. Mollit
-                            officia cillum Lorem ullamco minim nostrud elit
-                            officia tempor esse quis.
+                            Thank you for your interest in our newsletter.
+                            Please right click in the button below to confirm
+                            your subscription. You can cancel anytime without
+                            worries.
                         </Text>
                     </ModalBody>
                     <ModalFooter>

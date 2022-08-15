@@ -9,10 +9,16 @@ import {
     Button,
     ButtonGroup,
     Image,
-    Box,
+    chakra,
 } from "@chakra-ui/react";
+import { motion, isValidMotionProp } from "framer-motion";
 import HeaderImageLight from "../images/Image-Header-Light.svg";
 import HeaderImageDark from "../images/Image-Header-Dark.svg";
+
+const CustomChakraBox = chakra(motion.div, {
+    shouldForwardProp: (props) =>
+        isValidMotionProp(props) || props === "children",
+});
 
 export default function CustomHeader() {
     const customMaxWidth = useBreakpointValue({
@@ -59,12 +65,17 @@ export default function CustomHeader() {
                     Learn more
                 </Button>
             </ButtonGroup>
-            <Box mt={16}>
+            <CustomChakraBox
+                mt={16}
+                animate={{
+                    scale: [1.1, 1],
+                }}
+            >
                 <Image
                     src={useColorModeValue(HeaderImageLight, HeaderImageDark)}
                     alt="Header image of doctors and pills"
                 />
-            </Box>
+            </CustomChakraBox>
         </Container>
     );
 }
