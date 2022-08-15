@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable no-console */
+import React, { useState, useEffect } from "react";
 import {
     Container,
     useBreakpointValue,
@@ -22,9 +23,15 @@ import {
 } from "@chakra-ui/react";
 import { BellIcon } from "@chakra-ui/icons";
 import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
+// import {object, string} from "yup";
+
+/* const validationSchema = object({
+    email: string().email("Please enter a valid email address").required("Please enter a email in the field")
+}); */
 
 export default function Footer() {
     const { isOpen, onOpen, onClose } = useDisclosure();
+    const [emailValue, setEmailValue] = useState("");
 
     const customMaxWidth = useBreakpointValue({
         xl: "container.lg",
@@ -38,6 +45,14 @@ export default function Footer() {
         md: 12,
         base: 6,
     });
+
+    const handleChangeInputEmail = (event) => {
+        setEmailValue(event.target.value);
+    };
+
+    useEffect(() => {
+        console.log(emailValue);
+    }, [emailValue]);
 
     return (
         <Container maxWidth={customMaxWidth} py={customPadding}>
@@ -130,6 +145,8 @@ export default function Footer() {
                         <Input
                             placeholder="Your email address"
                             _focus={{ bg: "whiteAlpa.300" }}
+                            value={emailValue}
+                            onChange={handleChangeInputEmail}
                         />
                         <IconButton
                             bg={useColorModeValue("teal.500", "teal.200")}
