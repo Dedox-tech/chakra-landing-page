@@ -68,7 +68,7 @@ export default function CustomHeader() {
             <CustomChakraBox
                 mt={16}
                 animate={{
-                    scale: [1.1, 1],
+                    scale: [0.9, 1],
                 }}
             >
                 <Image

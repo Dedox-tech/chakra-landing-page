@@ -1,7 +1,9 @@
+/* eslint-disable no-nested-ternary */
 /* eslint-disable no-console */
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
     Container,
+    Box,
     useBreakpointValue,
     SimpleGrid,
     Stack,
@@ -9,6 +11,7 @@ import {
     Text,
     Link,
     Input,
+    FormControl,
     Button,
     IconButton,
     useColorModeValue,
@@ -19,19 +22,31 @@ import {
     ModalFooter,
     ModalBody,
     ModalCloseButton,
+    Alert,
+    AlertIcon,
+    AlertDescription,
+    CircularProgress,
     useDisclosure,
+    FormErrorMessage,
+    CloseButton,
 } from "@chakra-ui/react";
 import { BellIcon } from "@chakra-ui/icons";
 import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
-// import {object, string} from "yup";
-
-/* const validationSchema = object({
-    email: string().email("Please enter a valid email address").required("Please enter a email in the field")
-}); */
+import validateErrorFooterForm from "../utils/validateErrorFooterForm";
 
 export default function Footer() {
     const { isOpen, onOpen, onClose } = useDisclosure();
-    const [emailValue, setEmailValue] = useState("");
+    const [emailValue, setEmailValue] = useState("hi@example.com");
+    const [isLoading, setIsLoading] = useState(false);
+    const [isSuccess, setIsSuccess] = useState(null);
+    const [isFailure, setIsFailure] = useState(null);
+    const isError = !validateErrorFooterForm(emailValue);
+    const blackOrWhiteColor = useColorModeValue(
+        "blackAlpha.100",
+        "whiteAlpha.100"
+    );
+    const whiteOrGrayColor = useColorModeValue("white", "gray.800");
+    const tealLightOrTealDarkColor = useColorModeValue("teal.500", "teal.200");
 
     const customMaxWidth = useBreakpointValue({
         xl: "container.lg",
@@ -50,9 +65,53 @@ export default function Footer() {
         setEmailValue(event.target.value);
     };
 
-    useEffect(() => {
-        console.log(emailValue);
-    }, [emailValue]);
+    const handleCloseAlertSuccess = () => {
+        setIsSuccess(null);
+    };
+
+    const handleCloseAlertFailure = () => {
+        setIsFailure(null);
+    };
+
+    const hanldeClickSubmit = async () => {
+        console.log("The email value is: ", emailValue);
+        console.log("The error is: ", isError);
+        onClose();
+        setIsLoading(true);
+        try {
+            const response = await fetch(
+                "https://public.herotofu.com/v1/5519e6c0-1d0b-11ed-9730-af3c511c5e41",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        Accept: "application/json",
+                    },
+                    body: JSON.stringify({ email: emailValue }),
+                }
+            );
+
+            if (response.status === 422) {
+                throw new Error("Are you a robot?");
+            }
+
+            if (response.status !== 200) {
+                throw new Error("Oops! An unexpected error had ocurred");
+            }
+
+            const data = await response.json();
+
+            if (data) {
+                setIsLoading(false);
+                setIsSuccess(true);
+                setIsFailure(false);
+            }
+        } catch (error) {
+            setIsLoading(false);
+            setIsSuccess(false);
+            setIsFailure(true);
+        }
+    };
 
     return (
         <Container maxWidth={customMaxWidth} py={customPadding}>
@@ -71,10 +130,7 @@ export default function Footer() {
                             icon={<FaFacebook />}
                             w={8}
                             h={9}
-                            bg={useColorModeValue(
-                                "blackAlpha.100",
-                                "whiteAlpha.100"
-                            )}
+                            bg={blackOrWhiteColor}
                             rounded="full"
                         />
                         <IconButton
@@ -83,10 +139,7 @@ export default function Footer() {
                             icon={<FaTwitter />}
                             w={8}
                             h={9}
-                            bg={useColorModeValue(
-                                "blackAlpha.100",
-                                "whiteAlpha.100"
-                            )}
+                            bg={blackOrWhiteColor}
                             rounded="full"
                         />
                         <IconButton
@@ -95,10 +148,7 @@ export default function Footer() {
                             icon={<FaLinkedin />}
                             w={8}
                             h={9}
-                            bg={useColorModeValue(
-                                "blackAlpha.100",
-                                "whiteAlpha.100"
-                            )}
+                            bg={blackOrWhiteColor}
                             rounded="full"
                         />
                     </Stack>
@@ -142,21 +192,83 @@ export default function Footer() {
                         Stay up to date
                     </Text>
                     <Stack direction="row">
-                        <Input
-                            placeholder="Your email address"
-                            _focus={{ bg: "whiteAlpa.300" }}
-                            value={emailValue}
-                            onChange={handleChangeInputEmail}
-                        />
+                        <FormControl isInvalid={isError}>
+                            <Input
+                                placeholder="Your email address"
+                                _focus={{ bg: "whiteAlpa.300" }}
+                                value={emailValue}
+                                onChange={handleChangeInputEmail}
+                            />
+                            {isError ? (
+                                <FormErrorMessage>
+                                    Please enter a valid email address
+                                </FormErrorMessage>
+                            ) : null}
+                        </FormControl>
                         <IconButton
-                            bg={useColorModeValue("teal.500", "teal.200")}
-                            color={useColorModeValue("white", "gray.800")}
+                            bg={tealLightOrTealDarkColor}
+                            color={whiteOrGrayColor}
                             icon={<BellIcon />}
                             aria-label="Suscribe"
                             _hover={{ bg: "teal.600" }}
                             onClick={onOpen}
                         />
                     </Stack>
+                    {isLoading ? (
+                        <CircularProgress
+                            position="relative"
+                            top={2}
+                            right={0}
+                            color={tealLightOrTealDarkColor}
+                            isIndeterminate
+                        />
+                    ) : null}
+                    {isSuccess ? (
+                        <Box>
+                            <Alert
+                                status="info"
+                                position="relative"
+                                top={2}
+                                right={0}
+                            >
+                                <AlertIcon />
+                                <AlertDescription>
+                                    Email saved!
+                                </AlertDescription>
+                                <CloseButton
+                                    aria-label="close-alert"
+                                    alignSelf="flex-start"
+                                    position="relative"
+                                    right={-1}
+                                    top={-1}
+                                    onClick={handleCloseAlertSuccess}
+                                />
+                            </Alert>
+                        </Box>
+                    ) : null}
+                    {isFailure ? (
+                        <Box>
+                            <Alert
+                                status="error"
+                                position="relative"
+                                top={2}
+                                right={0}
+                            >
+                                <AlertIcon />
+                                <AlertDescription>
+                                    Oops! Server error
+                                </AlertDescription>
+                                <CloseButton
+                                    aria-label="close-alert"
+                                    alignSelf="flex-start"
+                                    position="relative"
+                                    right={-1}
+                                    top={-1}
+                                    onClick={handleCloseAlertFailure}
+                                />
+                            </Alert>
+                        </Box>
+                    ) : null}
                 </Stack>
             </SimpleGrid>
             <Modal isOpen={isOpen} onClose={onClose}>
@@ -173,7 +285,11 @@ export default function Footer() {
                         </Text>
                     </ModalBody>
                     <ModalFooter>
-                        <Button colorScheme="teal" onClick={onClose} mr={2}>
+                        <Button
+                            colorScheme="teal"
+                            onClick={hanldeClickSubmit}
+                            mr={2}
+                        >
                             Confirm
                         </Button>
                         <Button variant="ghost" onClick={onClose}>
