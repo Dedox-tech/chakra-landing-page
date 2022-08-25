@@ -1,10 +1,15 @@
 import React from "react";
-import { Box, Text } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
+import CustomMap from "../components/CustomMap";
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 
 export default function MapPage() {
     return (
         <Box>
-            <Text as="h2">I am a Text</Text>
+            <NavBar />
+            <CustomMap />
+            <Footer />
         </Box>
     );
 }
