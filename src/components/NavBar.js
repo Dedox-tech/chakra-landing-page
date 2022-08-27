@@ -79,7 +79,7 @@ export default function NavBar() {
                             About us
                         </Link>
                         <Link
-                            href="/"
+                            href="/contact-us"
                             px={2}
                             py={1}
                             rounded="md"
