@@ -1,7 +1,8 @@
 import React from "react";
 import Map from "react-map-gl";
 import DeckGL, { ContourLayer } from "deck.gl/typed";
-import { Container, useBreakpointValue, Heading, Box } from "@chakra-ui/react";
+import { Container, useBreakpointValue, Heading, Box, useColorModeValue} from "@chakra-ui/react";
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 export default function CustomMap() {
     const customMaxWidth = useBreakpointValue({
@@ -16,6 +17,9 @@ export default function CustomMap() {
         md: 12,
         base: 6,
     });
+
+    const lightOrUltraDark = useColorModeValue("gray.200", "gray.900");
+    const LightOrDarkMap = useColorModeValue("mapbox://styles/dedox-tech/cl7bh06jo004514p9f0qmtthz", "mapbox://styles/dedox-tech/cl7bgqtak003n14l7fcpvfk10");
 
     const layers = [
         new ContourLayer({
@@ -36,10 +40,13 @@ export default function CustomMap() {
                         zoom: 3,
                     }}
                     layers={layers}
+                    controller
+                    style={{borderColor: lightOrUltraDark, borderStyle: "solid", borderWidth: "1px"}}
                 >
                     <Map
                         mapboxAccessToken="pk.eyJ1IjoiZGVkb3gtdGVjaCIsImEiOiJjbDc5ZWllaDcwMTNwM29sOHFhZnIxeWp6In0.iDhKgIIy2XM8hNfzLGtxCA"
-                        mapStyle="mapbox://styles/mapbox/light-v9"
+                        mapStyle={LightOrDarkMap}
+                        reuseMaps
                     />
                 </DeckGL>
             </Box>

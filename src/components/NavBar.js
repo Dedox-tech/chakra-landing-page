@@ -55,7 +55,7 @@ export default function NavBar() {
                             Home
                         </Link>
                         <Link
-                            href="/"
+                            href="/map"
                             px={2}
                             py={1}
                             rounded="md"
@@ -110,7 +110,7 @@ export default function NavBar() {
                             Home
                         </Link>
                         <Link
-                            href="/"
+                            href="/map"
                             px={2}
                             py={1}
                             rounded="md"
