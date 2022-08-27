@@ -15,12 +15,14 @@ import ColorModeSwitcher from "../ColorModeSwitcher";
 
 export default function NavBar() {
     const { isOpen, onOpen, onClose } = useDisclosure();
+    const lightOrDark = useColorModeValue("gray.200", "gray.700");
+    const lightOrUltraDark = useColorModeValue("gray.200", "gray.900");
 
     return (
         <Box
             borderBottom={1}
             borderStyle="solid"
-            borderColor={useColorModeValue("gray.200", "gray.900")}
+            borderColor={lightOrUltraDark}
             minH="65px"
             px={4}
         >
@@ -47,19 +49,19 @@ export default function NavBar() {
                             rounded="md"
                             _hover={{
                                 textDecoration: "none",
-                                bg: useColorModeValue("gray.200", "gray.700"),
+                                bg: lightOrDark,
                             }}
                         >
                             Home
                         </Link>
                         <Link
-                            href="/"
+                            href="/map"
                             px={2}
                             py={1}
                             rounded="md"
                             _hover={{
                                 textDecoration: "none",
-                                bg: useColorModeValue("gray.200", "gray.700"),
+                                bg: lightOrDark,
                             }}
                         >
                             Map
@@ -71,7 +73,7 @@ export default function NavBar() {
                             rounded="md"
                             _hover={{
                                 textDecoration: "none",
-                                bg: useColorModeValue("gray.200", "gray.700"),
+                                bg: lightOrDark,
                             }}
                         >
                             About us
@@ -83,7 +85,7 @@ export default function NavBar() {
                             rounded="md"
                             _hover={{
                                 textDecoration: "none",
-                                bg: useColorModeValue("gray.200", "gray.700"),
+                                bg: lightOrDark,
                             }}
                         >
                             Contact us
@@ -102,19 +104,19 @@ export default function NavBar() {
                             rounded="md"
                             _hover={{
                                 textDecoration: "none",
-                                bg: useColorModeValue("gray.200", "gray.700"),
+                                bg: lightOrDark,
                             }}
                         >
                             Home
                         </Link>
                         <Link
-                            href="/"
+                            href="/map"
                             px={2}
                             py={1}
                             rounded="md"
                             _hover={{
                                 textDecoration: "none",
-                                bg: useColorModeValue("gray.200", "gray.700"),
+                                bg: lightOrDark,
                             }}
                         >
                             Map
@@ -126,7 +128,7 @@ export default function NavBar() {
                             rounded="md"
                             _hover={{
                                 textDecoration: "none",
-                                bg: useColorModeValue("gray.200", "gray.700"),
+                                bg: lightOrDark,
                             }}
                         >
                             About us
@@ -138,7 +140,7 @@ export default function NavBar() {
                             rounded="md"
                             _hover={{
                                 textDecoration: "none",
-                                bg: useColorModeValue("gray.200", "gray.700"),
+                                bg: lightOrDark,
                             }}
                         >
                             Contact us
