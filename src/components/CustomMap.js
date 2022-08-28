@@ -3,6 +3,7 @@ import Map from "react-map-gl";
 import DeckGL, { ContourLayer } from "deck.gl/typed";
 import { Container, useBreakpointValue, Heading, Box, useColorModeValue} from "@chakra-ui/react";
 import 'mapbox-gl/dist/mapbox-gl.css';
+// import exampleData from "../utils/exampleData";
 
 export default function CustomMap() {
     const customMaxWidth = useBreakpointValue({
