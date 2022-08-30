@@ -22,7 +22,6 @@ export default function NewCustomMap() {
         base: 6,
     });
     */
-
     useEffect(() => {
         if (!doesMapExist) {
             // eslint-disable-next-line no-unused-vars, prefer-const
@@ -73,7 +72,7 @@ export default function NewCustomMap() {
             <Box id = "svgMap" />
         </Container>
         */
-        <div className='app'>
+             <div className='app'>
         <h1>svgMap React demo</h1>
         <div id='svgMap'> </div>
       </div>

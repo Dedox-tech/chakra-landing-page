@@ -1,4 +1,4 @@
-import React, { StrictMode } from "react";
+import React, {  } from "react";
 import * as ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { ChakraProvider, theme, ColorModeScript } from "@chakra-ui/react";
@@ -10,14 +10,12 @@ const container = document.getElementById("root");
 const root = ReactDOM.createRoot(container);
 
 root.render(
-    <StrictMode>
         <BrowserRouter>
             <ColorModeScript />
             <ChakraProvider theme={theme}>
                 <App />
             </ChakraProvider>
         </BrowserRouter>
-    </StrictMode>
 );
 
 // If you want your app to work offline and load faster, you can change

@@ -11,7 +11,7 @@ import {
     useColorModeValue,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import ColorModeSwitcher from "../ColorModeSwitcher";
+// import ColorModeSwitcher from "../ColorModeSwitcher";
 
 export default function NavBar() {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -92,7 +92,10 @@ export default function NavBar() {
                         </Link>
                     </HStack>
                 </HStack>
-                <ColorModeSwitcher />
+                     {/*
+                            <ColorModeSwitcher />
+                     */}       
+
             </Flex>
             {isOpen ? (
                 <Box pb={4} display={{ md: "none" }}>
