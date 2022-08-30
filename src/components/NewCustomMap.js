@@ -1,6 +1,6 @@
 /* eslint-disable new-cap */
 import React, {useState, useEffect} from "react";
-import {Box, Container, Heading, useBreakpointValue} from "@chakra-ui/react";
+// import {/*Box, Container, Heading,*/ useBreakpointValue} from "@chakra-ui/react";
 import svgMap from "svgmap";
 import 'svgmap/dist/svgMap.min.css';
 
@@ -8,6 +8,7 @@ export default function NewCustomMap() {
 
     const [doesMapExist, setDoesMapExist] = useState(false);
 
+    /*
     const customMaxWidth = useBreakpointValue({
         xl: "container.lg",
         lg: "4xl",
@@ -20,12 +21,13 @@ export default function NewCustomMap() {
         md: 12,
         base: 6,
     });
+    */
 
     useEffect(() => {
         if (!doesMapExist) {
             // eslint-disable-next-line no-unused-vars, prefer-const
             let myNewSvgMap = new svgMap({
-                targetElementID: "map",
+                targetElementID: "svgMap",
                 data: {
                     data: {
                       moderna: {
@@ -63,12 +65,18 @@ export default function NewCustomMap() {
     }, [doesMapExist]);
 
     return (
+      /*
         <Container maxWidth={customMaxWidth} py={customPadding} centerContent>
             <Heading as="h1" mb={8}>
                 Meet our beautiful map!
             </Heading>
-            <Box id = "map" />
+            <Box id = "svgMap" />
         </Container>
+        */
+        <div className='app'>
+        <h1>svgMap React demo</h1>
+        <div id='svgMap'> </div>
+      </div>
     );
 
 }
