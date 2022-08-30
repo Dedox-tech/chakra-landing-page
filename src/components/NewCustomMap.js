@@ -2,7 +2,7 @@
 import React, {useState, useEffect} from "react";
 // import {/*Box, Container, Heading,*/ useBreakpointValue} from "@chakra-ui/react";
 import svgMap from "svgmap";
-import 'svgmap/dist/svgMap.min.css';
+import "../svgMap.css";
 
 export default function NewCustomMap() {
 
