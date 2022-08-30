@@ -1,4 +1,5 @@
 /* eslint-disable new-cap */
+import { Box, Container } from "@chakra-ui/react";
 import React, {useState, useEffect} from "react";
 // import {/*Box, Container, Heading,*/ useBreakpointValue} from "@chakra-ui/react";
 import svgMap from "svgmap";
@@ -72,10 +73,15 @@ export default function NewCustomMap() {
             <Box id = "svgMap" />
         </Container>
         */
-             <div className='app'>
+       <Container>
+       <Box>
+       <div className='app'>
         <h1>svgMap React demo</h1>
         <div id='svgMap'> </div>
       </div>
+       </Box>
+        
+      </Container>
     );
 
 }
