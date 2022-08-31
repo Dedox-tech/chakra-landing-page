@@ -9,6 +9,7 @@ import {
     Link,
     Heading,
     useColorModeValue,
+    Avatar,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 // import ColorModeSwitcher from "../ColorModeSwitcher";
@@ -92,10 +93,7 @@ export default function NavBar() {
                         </Link>
                     </HStack>
                 </HStack>
-                     {/*
-                            <ColorModeSwitcher />
-                     */}       
-
+                <Avatar size="sm" bg="#4e545e" />
             </Flex>
             {isOpen ? (
                 <Box pb={4} display={{ md: "none" }}>
