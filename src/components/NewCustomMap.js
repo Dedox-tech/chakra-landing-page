@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import svgMap from "svgmap";
 import "../svgMap.css";
+import countriesData from "../vaccine_information";
 
 export default function NewCustomMap() {
     const [doesMapExist, setDoesMapExist] = useState(false);
@@ -11,47 +12,53 @@ export default function NewCustomMap() {
             // eslint-disable-next-line no-unused-vars, prefer-const
             let myNewSvgMap = new svgMap({
                 targetElementID: "svgMap",
+                colorMax: "#974f8d",
+                colorMin: "#d3abce",
                 data: {
                     data: {
-                        moderna: {
+                        CanSino: {
+                            name: "Cansino Vaccines",
+                            format: "{0} dosis",
+                            thousandSeparator: ",",
+                        },
+                        Moderna: {
                             name: "Moderna Vaccines",
                             format: "{0} dosis",
                             thousandSeparator: ",",
-                            thresholdMax: 50000,
-                            thresholdMin: 0,
                         },
-                        jhonson_jhonson: {
-                            name: "Jhonson and Jhonson Vaccines",
+                        "Oxford/AstraZeneca": {
+                            name: "Astrazeneca Vaccines",
                             format: "{0} dosis",
-                            thresholdMax: 50000,
-                            thresholdMin: 0,
+                            thousandSeparator: ",",
                         },
-                        sinopharma: {
-                            name: "Sinopharma Vaccines",
+                        "Pfizer/BioNTech": {
+                            name: "Pfizer Vaccines",
                             format: "{0} dosis",
-                            thresholdMax: 50000,
-                            thresholdMin: 0,
+                            thousandSeparator: ",",
+                        },
+                        "Sinopharm/Beijing": {
+                            name: "Sinopharm Vaccines",
+                            format: "{0} dosis",
+                            thousandSeparator: ",",
+                        },
+                        "Sputnik V": {
+                            name: "Sputnik V Vaccines",
+                            format: "{0} dosis",
+                            thousandSeparator: ",",
+                        },
+                        "Johnson&Johnson": {
+                            name: "Johnson & Johnson Vaccines",
+                            format: "{0} dosis",
+                            thousandSeparator: ",",
+                        },
+                        Sinovac: {
+                            name: "Sinovac Vaccines",
+                            format: "{0} dosis",
+                            thousandSeparator: ",",
                         },
                     },
-                    applyData: "moderna",
-                    values: {
-                        AF: {
-                            moderna: 587,
-                            jhonson_jhonson: 473,
-                            sinopharma: 334,
-                        },
-                        AL: {
-                            moderna: 4583,
-                            jhonson_jhonson: 1109,
-                            sinopharma: 334,
-                        },
-                        DZ: {
-                            moderna: 4293,
-                            jhonson_jhonson: 1001,
-                            sinopharma: 0,
-                        },
-                        // ...
-                    },
+                    applyData: "Moderna",
+                    values: countriesData,
                 },
             });
             setDoesMapExist(true);
