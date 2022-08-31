@@ -28,7 +28,7 @@ export default function ContactUs() {
       };
 
     const onClickSend = () =>{
-        navigate("/map");
+        navigate("/confirmation");
     }
 
     const customMaxWidth = useBreakpointValue({
@@ -42,6 +42,7 @@ export default function ContactUs() {
             <NavBar />
             <Container maxWidth={customMaxWidth} centerContent>
                 <Heading as="h1" align="center">Contact Us</Heading>
+                <FormLabel>If you have some quesion to ask us please provide us your fullname, email and a message.</FormLabel>
                 <FormControl>
                     <FormLabel>Full Name</FormLabel>
                     <Input type='Text' onChange={setFullNameValue} values={fullName} />

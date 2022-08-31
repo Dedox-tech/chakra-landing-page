@@ -67,7 +67,7 @@ export default function NavBar() {
                             Map
                         </Link>
                         <Link
-                            href="/"
+                            href="about-us"
                             px={2}
                             py={1}
                             rounded="md"
@@ -122,7 +122,7 @@ export default function NavBar() {
                             Map
                         </Link>
                         <Link
-                            href="/"
+                            href="/about-us"
                             px={2}
                             py={1}
                             rounded="md"
