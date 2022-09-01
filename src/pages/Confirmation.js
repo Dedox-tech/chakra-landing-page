@@ -30,7 +30,7 @@ export default function Confirmation() {
     return (
         <Box>
             <NavBar />
-            <Container maxWidth={customMaxWidth} centerContent>
+            <Container maxWidth={customMaxWidth} centerContent mt={10}>
                 <Heading as="h1" align="center">
                     Confirmation
                 </Heading>
@@ -41,7 +41,9 @@ export default function Confirmation() {
                     alignItems="center"
                     justifyContent="center"
                     textAlign="center"
-                    height="200px"
+                    minHeight="200px"
+                    mt={5}
+                    p={5}
                 >
                     <AlertIcon boxSize="40px" mr={0} />
                     <AlertTitle mt={4} mb={1} fontSize="lg">
@@ -51,8 +53,9 @@ export default function Confirmation() {
                         Thanks for submitting your request. Our team will get
                         back to you soon.
                     </AlertDescription>
-
-                    <Button onClick={onClickGoToMap}>Go To Maps</Button>
+                    <Button onClick={onClickGoToMap} mt={5}>
+                        Go To Maps
+                    </Button>
                 </Alert>
             </Container>
             <Footer />

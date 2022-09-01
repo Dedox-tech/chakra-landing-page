@@ -49,34 +49,36 @@ export default function ContactUs() {
     return (
         <Box>
             <NavBar />
-            <Container maxWidth={customMaxWidth} centerContent>
+            <Container maxWidth={customMaxWidth} centerContent mt={10}>
                 <Heading as="h1" align="center">
                     Contact Us
                 </Heading>
-                <FormLabel>
+                <FormLabel mt={5}>
                     If you have some quesion to ask us please provide us your
                     fullname, email and a message.
                 </FormLabel>
-                <FormControl>
+                <FormControl mt={5}>
                     <FormLabel>Full Name</FormLabel>
                     <Input
                         type="Text"
                         onChange={setFullNameValue}
                         values={fullName}
+                        size="lg"
                     />
                 </FormControl>
-                <FormControl>
+                <FormControl mt={5}>
                     <FormLabel>Email address</FormLabel>
                     <Input
                         type="email"
                         onChange={setEmailValue}
                         values={email}
+                        size="lg"
                     />
                     <FormHelperText>
                         We ll never share your email.
                     </FormHelperText>
                 </FormControl>
-                <FormControl>
+                <FormControl mt={5}>
                     <FormLabel>Message</FormLabel>
                     <Textarea
                         placeholder="Write your message..."
@@ -88,7 +90,7 @@ export default function ContactUs() {
                     <Divider />
                 </FormControl>
                 {"\n"}
-                <FormControl align="right" m={4}>
+                <FormControl align="right" m={5}>
                     <Button
                         bg={Footer.tealLightOrTealDarkColor}
                         color={Footer.whiteOrGrayColor}
