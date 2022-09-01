@@ -12,6 +12,7 @@ import {
     Button,
     Textarea,
     Divider,
+    Text,
 } from "@chakra-ui/react";
 import { EmailIcon } from "@chakra-ui/icons";
 import NavBar from "../components/NavBar";
@@ -51,12 +52,12 @@ export default function ContactUs() {
             <NavBar />
             <Container maxWidth={customMaxWidth} centerContent mt={10}>
                 <Heading as="h1" align="center">
-                    Contact Us
+                    Contact us
                 </Heading>
-                <FormLabel mt={5}>
+                <Text mt={5}>
                     If you have some quesion to ask us please provide us your
-                    fullname, email and a message.
-                </FormLabel>
+                    full name, email and a message.
+                </Text>
                 <FormControl mt={5}>
                     <FormLabel>Full Name</FormLabel>
                     <Input
