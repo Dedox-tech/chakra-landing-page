@@ -9,10 +9,9 @@ import {
     Link,
     Heading,
     useColorModeValue,
-    Avatar,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-// import ColorModeSwitcher from "../ColorModeSwitcher";
+import ColorModeSwitcher from "../ColorModeSwitcher";
 
 export default function NavBar() {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -68,7 +67,7 @@ export default function NavBar() {
                             Map
                         </Link>
                         <Link
-                            href="/"
+                            href="about-us"
                             px={2}
                             py={1}
                             rounded="md"
@@ -80,7 +79,7 @@ export default function NavBar() {
                             About us
                         </Link>
                         <Link
-                            href="/"
+                            href="/contact-us"
                             px={2}
                             py={1}
                             rounded="md"
@@ -93,7 +92,7 @@ export default function NavBar() {
                         </Link>
                     </HStack>
                 </HStack>
-                <Avatar size="sm" bg="#4e545e" />
+                <ColorModeSwitcher />
             </Flex>
             {isOpen ? (
                 <Box pb={4} display={{ md: "none" }}>
@@ -123,7 +122,7 @@ export default function NavBar() {
                             Map
                         </Link>
                         <Link
-                            href="/"
+                            href="/about-us"
                             px={2}
                             py={1}
                             rounded="md"
