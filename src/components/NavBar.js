@@ -67,7 +67,11 @@ export default function NavBar() {
                             Map
                         </Link>
                         <Link
+<<<<<<< HEAD
                             href="/about-us"
+=======
+                            href="about-us"
+>>>>>>> 1a142c9ce90d7a6506dbd3dfe181eb1557089269
                             px={2}
                             py={1}
                             rounded="md"
@@ -79,7 +83,7 @@ export default function NavBar() {
                             About us
                         </Link>
                         <Link
-                            href="/"
+                            href="/contact-us"
                             px={2}
                             py={1}
                             rounded="md"
@@ -122,7 +126,7 @@ export default function NavBar() {
                             Map
                         </Link>
                         <Link
-                            href="/"
+                            href="/about-us"
                             px={2}
                             py={1}
                             rounded="md"
