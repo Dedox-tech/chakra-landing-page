@@ -1,68 +1,29 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Covid-19 Vaccination Project
 
-## Available Scripts
+The present repository contains the code of a landing page developed as the final project of the English Bootcamp, at TEAM International. In the site, users can see information about the status of Covid-19 vaccination in the world. The live version can be checked at [Netlify](https://vaccinationproject.netlify.app/).
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+The landing page was built with React and Chakra UI, employing a polished minimalist design. Also, the site includes a dark-mode, that users can toggle according with their preferences. When users enter the site, they can see a home option, that explains the rationale of the page. Moreover, there is FAQ section, with common question about Covid-19 vaccines.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Home](https://dl.dropboxusercontent.com/s/3ayvskc0tduck37/Home-computador.png?dl=0)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+The most relevant feature is our map. It shows the number of doses of Covid-19 vaccines given by country. On hover, a pop up appears with a country flag and the amount of doses according to the type (Moderna, Pfizer, Sinovac, etc.). Furthermore, a Contact Us section was made, where you can send a message to the development team.
 
-### `npm test`
+![Map](https://dl.dropboxusercontent.com/s/z69summc5lfqu5v/Mapa%20celular.png?dl=0)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Future improvements 
 
-### `npm run build`
+Traditional client-side React apps comes with some SEO considerations. Since the entire markup is generated at run-time by JavaScript, browser crawlers could have problems indexing the content on the web. A possible solution could be porting the app to Next.js, taking advantage of its server-side rendering (SSR) and static site generation (SSG) features.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Running the project locally
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+You can run the project using the following commands:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+git clone https://github.com/Dedox-tech/chakra-landing-page.git
+cd chakra-landing-page
+npm install
+npm start
+```
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
