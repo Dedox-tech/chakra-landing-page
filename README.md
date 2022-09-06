@@ -4,11 +4,11 @@ The present repository contains the code of a landing page developed as the fina
 
 ## Features
 
-The landing page was built with React and Chakra UI, employing a polished minimalist design. Also, the site includes a dark-mode, that users can toggle according with their preferences. When users enter the site, they can see a home option, that explains the rationale of the page. Moreover, there is FAQ section, with common question about Covid-19 vaccines.
+The landing page was built with React and Chakra UI, employing a minimalist design. Also, the site includes a dark-mode, that users can toggle according with their preferences. When users enter the site, they can see a home option, that explains the rationale of the page. Moreover, there is a FAQ section, with common question about Covid-19 vaccines.
 
 ![Home](https://dl.dropboxusercontent.com/s/3ayvskc0tduck37/Home-computador.png?dl=0)
 
-The most relevant feature is our map. It shows the number of doses of Covid-19 vaccines given by country. On hover, a pop up appears with a country flag and the amount of doses according to the type (Moderna, Pfizer, Sinovac, etc.). Furthermore, a Contact Us section was made, where you can send a message to the development team.
+The most relevant feature is our map. It shows the number of doses of Covid-19 vaccines of each country. On hover, a pop up appears with a country flag and the amount of doses according to the type (Moderna, Pfizer, Sinovac, etc.). Furthermore, a Contact Us section was made, where you can send a message to the development team.
 
 ![Map](https://dl.dropboxusercontent.com/s/z69summc5lfqu5v/Mapa%20celular.png?dl=0)
 
