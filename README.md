@@ -4,7 +4,7 @@ The present repository contains the code of a landing page developed as the fina
 
 ## Features
 
-The landing page was built with React and Chakra UI, employing a minimalist design. Also, the site includes a dark-mode, that users can toggle according with their preferences. When users enter the site, they can see a home option, that explains the rationale of the page. Moreover, there is a FAQ section, with common question about Covid-19 vaccines.
+The landing page was built with React and Chakra UI, employing a minimalist design. Also, the site includes a dark-mode, that users can toggle according with their preferences. When users enter the site, they can see a home option, that explains the rationale of the page. Moreover, there is a FAQ section, with common questions about Covid-19 vaccines.
 
 ![Home](https://dl.dropboxusercontent.com/s/3ayvskc0tduck37/Home-computador.png?dl=0)
 
