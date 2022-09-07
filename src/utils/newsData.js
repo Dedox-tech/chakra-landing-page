@@ -1,11 +1,11 @@
-import Image1 from "../images/Image-1.jpg";
-import Image2 from "../images/Image-2.jpg";
-import Image3 from "../images/Image-3.jpg";
-import Image4 from "../images/Image-4.jpg";
-import Image5 from "../images/Image-5.jpg";
-import Image6 from "../images/Image-6.jpg";
-import Image7 from "../images/Image-7.jpg";
-import Image8 from "../images/Image-8.jpg";
+import Image1 from "../images/Image-1.png";
+import Image2 from "../images/Image-2.png";
+import Image3 from "../images/Image-3.png";
+import Image4 from "../images/Image-4.png";
+import Image5 from "../images/Image-5.png";
+import Image6 from "../images/Image-6.png";
+import Image7 from "../images/Image-7.png";
+import Image8 from "../images/Image-8.png";
 
 const newsData = [
     {

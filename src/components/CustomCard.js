@@ -8,15 +8,24 @@ import {
     useColorModeValue,
     Avatar,
 } from "@chakra-ui/react";
-import Image1 from "../images/Image-1.jpg";
+import PropTypes from "prop-types";
 
-export default function CustomCard() {
+function CustomCard({
+    country,
+    heading,
+    description,
+    author,
+    date,
+    timeInMins,
+    image,
+    imageAlt,
+}) {
     const tealLightOrTealDarkColor = useColorModeValue("teal.500", "teal.200");
 
     return (
-        <Box maxW="400px" boxShadow="md" p={6}>
-            <Box h="220px" mx="-6">
-                <Image src={Image1} alt="Covid-19 Image" layout="fill" />
+        <Box maxW="400px" boxShadow="md" p={6} overflow="hidden" w="full">
+            <Box h="220px" mt={-6} mx={-6} mb={6} pos="relative">
+                <Image src={image} alt={imageAlt} objectFit="fill" />
             </Box>
             <Stack mt="5">
                 <Text
@@ -26,24 +35,33 @@ export default function CustomCard() {
                     fontSize="sm"
                     letterSpacing="1.1"
                 >
-                    Colombia
+                    {country}
                 </Text>
                 <Heading fontFamily="body" fontSize="2xl">
-                    New omicron boosters are now available at U.S.
+                    {heading}
                 </Heading>
-                <Text mt="4">
-                    The U.S. authorized the first major makeover of the Covid-19
-                    vaccines this week in an effort to stem an expected tide of
-                    infections and hospitalizations this fall.
-                </Text>
+                <Text mt="4">{description}</Text>
             </Stack>
             <Stack mt="5" direction="row" spacing="4">
-                <Avatar name="Diego" size="md" />
+                <Avatar name={author} size="md" />
                 <Stack direction="column" fontSize="sm" spacing="0">
-                    <Text fontWeight="600">Diego Murillo</Text>
-                    <Text>Sep, 06, 2021 · 5 min read</Text>
+                    <Text fontWeight="600">{author}</Text>
+                    <Text>{`${date} · ${timeInMins} min read`}</Text>
                 </Stack>
             </Stack>
         </Box>
     );
 }
+
+CustomCard.propTypes = {
+    country: PropTypes.string.isRequired,
+    heading: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    timeInMins: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    imageAlt: PropTypes.string.isRequired,
+};
+
+export default CustomCard;
