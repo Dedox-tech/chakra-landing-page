@@ -93,7 +93,7 @@ const newsData = [
         description:
             "A new study from Israel found that the risk of developing myocarditis among males ages 16 to 19 years was about 1 in 15,000 after third dose of the Pfizer COVID-19 vaccine.",
         author: "John Davis",
-        date: "Sep, 06, 2022",
+        date: "Aug, 31, 2022",
         timeInMins: "22",
         image: Image8,
         imageAlt: "A man wearing a mask. The man is a little worried",
