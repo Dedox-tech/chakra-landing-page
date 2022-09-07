@@ -5,6 +5,7 @@ import {
     Heading,
     SimpleGrid,
 } from "@chakra-ui/react";
+import { v4 as uuidv4 } from "uuid";
 import CustomCard from "./CustomCard";
 import newsData from "../utils/newsData";
 
@@ -40,6 +41,7 @@ export default function CustomCardsList() {
                             timeInMins={timeInMins}
                             image={image}
                             imageAlt={imageAlt}
+                            key={uuidv4()}
                         />
                     );
                 })}
