@@ -17,9 +17,9 @@ export default function CustomCardsList() {
     });
 
     return (
-        <Container maxWidth={customMaxWidth} centerContent>
-            <Heading mt="10">Stay informed with the latest news!</Heading>
-            <SimpleGrid columns={{ base: 1, md: 2 }} spacing="20" mt="10">
+        <Container maxWidth={customMaxWidth} centerContent mt="10" mb="5">
+            <Heading>Stay informed with the latest news!</Heading>
+            <SimpleGrid columns={{ base: 1, lg: 2 }} spacing="20" mt="10">
                 {newsData.map((element) => {
                     const {
                         country,

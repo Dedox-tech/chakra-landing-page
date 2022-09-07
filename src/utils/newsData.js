@@ -23,7 +23,7 @@ const newsData = [
         country: "China",
         heading: "China approves first inhaled Covid vaccine",
         description:
-            "China has become the first country to green-light an inhaled Covid-19 vaccine, paving the way for potential use of the needle-free product in the country, where suppressing the spread of Covid-19 remains a top priority.",
+            "China has become the first country to green-light an inhaled Covid-19 vaccine, paving the way for potential use of the needle-free product in the country.",
         author: "Rose Hutchinson",
         date: "Sep, 06, 2022",
         timeInMins: "8",
@@ -58,7 +58,7 @@ const newsData = [
         country: "Switzerland",
         heading: "Interim statement on COVID-19 vaccination for children",
         description:
-            "WHO is currently reviewing the emerging evidence on the need for and timing of vaccinating children and adolescents with the currently available COVID-19 vaccines, which have received Emergency Use Listing (EUL).",
+            "WHO is reviewing the evidence on the need for and timing of vaccinating children and adolescents with available COVID-19 vaccines, which have received Emergency Use Listing.",
         author: "World Health Organization",
         date: "Sep, 03, 2022",
         timeInMins: "16",
@@ -67,10 +67,9 @@ const newsData = [
     },
     {
         country: "United States of America",
-        heading:
-            "Biden administration is preparing for the end of free COVID-19",
+        heading: "Biden is preparing the end of free COVID-19 vaccines",
         description:
-            "The federal budget for buying and distributing COVID-19 vaccines will run out as early as January.",
+            "The federal budget for buying and distributing COVID-19 vaccines will run out as early as January. Those discussions have been ramped up late last month.",
         author: "Lucy Vargas",
         date: "Sep, 03, 2022",
         timeInMins: "7",
@@ -81,7 +80,7 @@ const newsData = [
         country: "Spain",
         heading: "COVID-19 vaccine campaigns could be faster, industry says",
         description:
-            "Speed is of the essence to protect citizens from new COVID-19 outbreaks this fall, but the process to distribute more vaccines must be accelerated, according to pharmaceutical industry representatives.",
+            "Speed is of the essence to protect citizens from new COVID-19 outbreaks this fall, but the process to distribute more vaccines must be accelerated, according to industry representatives.",
         author: "Isabel Silva",
         date: "Sep, 02, 2022",
         timeInMins: "4",
@@ -90,10 +89,9 @@ const newsData = [
     },
     {
         country: "Israel",
-        heading:
-            "Data from Israel: myocarditis after COVID-19 vaccines remain rare",
+        heading: "Myocarditis after COVID-19 vaccines remain rare",
         description:
-            "A new study from Israel found that the risk of developing myocarditis among males ages 16 to 19 years was about 1 in 15,000 after third dose of the Pfizer COVID-19 vaccine",
+            "A new study from Israel found that the risk of developing myocarditis among males ages 16 to 19 years was about 1 in 15,000 after third dose of the Pfizer COVID-19 vaccine.",
         author: "John Davis",
         date: "Sep, 06, 2022",
         timeInMins: "22",
