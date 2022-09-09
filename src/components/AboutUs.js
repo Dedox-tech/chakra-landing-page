@@ -54,7 +54,7 @@ export default function AboutUs(){
                                 lineHeight='tight'
                                 noOfLines={2}
                             >
-                                Diego Fernando Murillo Ferrer
+                                Diego Murillo Ferrer
                             </Box>
 
                             <Box>
