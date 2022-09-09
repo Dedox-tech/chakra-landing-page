@@ -67,6 +67,18 @@ export default function NavBar() {
                             Map
                         </Link>
                         <Link
+                            href="/news"
+                            px={2}
+                            py={1}
+                            rounded="md"
+                            _hover={{
+                                textDecoration: "none",
+                                bg: lightOrDark,
+                            }}
+                        >
+                            News
+                        </Link>
+                        <Link
                             href="about-us"
                             px={2}
                             py={1}
@@ -120,6 +132,18 @@ export default function NavBar() {
                             }}
                         >
                             Map
+                        </Link>
+                        <Link
+                            href="/news"
+                            px={2}
+                            py={1}
+                            rounded="md"
+                            _hover={{
+                                textDecoration: "none",
+                                bg: lightOrDark,
+                            }}
+                        >
+                            News
                         </Link>
                         <Link
                             href="/about-us"
