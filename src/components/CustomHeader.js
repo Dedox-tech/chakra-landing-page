@@ -10,6 +10,7 @@ import {
     ButtonGroup,
     Image,
     chakra,
+    Highlight,
 } from "@chakra-ui/react";
 import { motion, isValidMotionProp } from "framer-motion";
 import HeaderImageLight from "../images/Image-Header-Light.svg";
@@ -34,6 +35,9 @@ export default function CustomHeader() {
         base: 6,
     });
 
+    const tealLightOrTealDarkColor = useColorModeValue("teal.500", "teal.200");
+    const whiteOrGrayColor = useColorModeValue("white", "gray.800");
+
     return (
         <Container maxWidth={customMaxWidth} py={customPadding} centerContent>
             <Heading
@@ -41,15 +45,18 @@ export default function CustomHeader() {
                 fontSize={{ base: "4xl", sm: "5xl", md: "6xl" }}
                 align="center"
             >
-                Track Coronavirus
-                <Text
-                    as="span"
-                    color={useColorModeValue("teal.500", "teal.200")}
+                <Highlight
+                    query="Vaccinations"
+                    styles={{
+                        px: "2",
+                        py: "0.5",
+                        rounded: "full",
+                        bg: tealLightOrTealDarkColor,
+                        color: whiteOrGrayColor,
+                    }}
                 >
-                    {" "}
-                    Vaccinations{" "}
-                </Text>
-                around the world
+                    Track Coronavirus Vaccinations around the world
+                </Highlight>
             </Heading>
             <Text mt={8} fontSize={{ base: "lg", md: "xl" }} align="center">
                 Did you know that more than 5.29 billion people worldwide have

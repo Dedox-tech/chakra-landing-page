@@ -25,6 +25,7 @@ export default function NavBar() {
             borderColor={lightOrUltraDark}
             minH="65px"
             px={4}
+            boxShadow="sm"
         >
             <Flex alignItems="center" justifyContent="space-between" h={16}>
                 <IconButton

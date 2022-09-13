@@ -4,7 +4,7 @@ import Diego from "../images/Diego-Murillo.png";
 
 export default function AboutUsCard() {
     return (
-        <Box borderWidth="1px" p={5}>
+        <Box borderWidth="1px" p={5} boxShadow="md" borderRadius="sm">
             <Avatar src={Diego} size="2xl" borderWidth="1px" />
             <Box mt={2}>
                 <Heading as="h6" size="md">

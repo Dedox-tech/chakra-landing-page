@@ -23,7 +23,13 @@ function CustomCard({
     const tealLightOrTealDarkColor = useColorModeValue("teal.500", "teal.200");
 
     return (
-        <Box maxW="410px" boxShadow="md" p={6} overflow="hidden">
+        <Box
+            maxW="410px"
+            boxShadow="md"
+            p={6}
+            overflow="hidden"
+            borderRadius="sm"
+        >
             <Image src={image} alt={imageAlt} objectFit="fill" />
             <Stack mt="5">
                 <Text
