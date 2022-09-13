@@ -21,38 +21,42 @@ function CustomCard({
     imageAlt,
 }) {
     const tealLightOrTealDarkColor = useColorModeValue("teal.500", "teal.200");
+    const lightOrUltraDark = useColorModeValue("gray.200", "gray.900");
 
     return (
         <Box
             maxW="410px"
             boxShadow="md"
-            p={6}
             overflow="hidden"
             borderRadius="sm"
+            borderWidth="1px"
+            borderColor={lightOrUltraDark}
         >
             <Image src={image} alt={imageAlt} objectFit="fill" />
-            <Stack mt="5">
-                <Text
-                    color={tealLightOrTealDarkColor}
-                    fontWeight="700"
-                    textTransform="uppercase"
-                    fontSize="sm"
-                    letterSpacing="1.1"
-                >
-                    {country}
-                </Text>
-                <Heading fontFamily="body" fontSize="2xl">
-                    {heading}
-                </Heading>
-                <Text mt="4">{description}</Text>
-            </Stack>
-            <Stack mt="5" direction="row" spacing="4">
-                <Avatar name={author} size="md" />
-                <Stack direction="column" fontSize="sm" spacing="0">
-                    <Text fontWeight="600">{author}</Text>
-                    <Text>{`${date} · ${timeInMins} min read`}</Text>
+            <Box p={6}>
+                <Stack>
+                    <Text
+                        color={tealLightOrTealDarkColor}
+                        fontWeight="700"
+                        textTransform="uppercase"
+                        fontSize="sm"
+                        letterSpacing="1.1"
+                    >
+                        {country}
+                    </Text>
+                    <Heading fontFamily="body" fontSize="2xl">
+                        {heading}
+                    </Heading>
+                    <Text mt="4">{description}</Text>
                 </Stack>
-            </Stack>
+                <Stack mt="5" direction="row" spacing="4">
+                    <Avatar name={author} size="md" />
+                    <Stack direction="column" fontSize="sm" spacing="0">
+                        <Text fontWeight="600">{author}</Text>
+                        <Text>{`${date} · ${timeInMins} min read`}</Text>
+                    </Stack>
+                </Stack>
+            </Box>
         </Box>
     );
 }

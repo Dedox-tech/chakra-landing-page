@@ -8,32 +8,32 @@ const teamData = [
         name: "Diego Murillo Ferrer",
         age: "23",
         citizenship: "Colombian",
-        job: "Front-End Developer",
-        description: "",
+        description:
+            "Front-End Developer with a broad knowledge of the React ecosystem. Diego likes to build applications that improve the efficiency of business units.",
         image: Diego,
     },
     {
         name: "Jose Miguel Lanza",
         age: "37",
         citizenship: "Bolivian",
-        job: "Software Engineer",
-        description: "",
+        description:
+            "Senior Software Engineer with over 10 years of experience developing web applications. Jose likes to work on the back-end side of things, specially in Java related projects.",
         image: Jose,
     },
     {
         name: "Bryan Escobar Restrepo",
         age: "24",
         citizenship: "Colombian",
-        job: "Data Engineer",
-        description: "",
+        description:
+            "Bryan is a Data Engineer with practical experience in tools such as Python, SQL and Power Bi. He is a Control Engineer from Universidad Nacional de Colombia.",
         image: Bryan,
     },
     {
         name: "Maria Carolina Parra",
         age: "36",
         citizenship: "Colombian",
-        job: "Business Manager",
-        description: "",
+        description:
+            "Business Management graduate with a deep understanding of scrum methodologies. Maria is an enthusiastic and highly motivated individual, who likes to serve well to her teams.",
         image: Maria,
     },
 ];

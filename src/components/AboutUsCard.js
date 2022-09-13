@@ -1,22 +1,48 @@
 import React from "react";
-import { Box, Text, Avatar, Heading } from "@chakra-ui/react";
-import Diego from "../images/Diego-Murillo.png";
+import {
+    Box,
+    Text,
+    Avatar,
+    Heading,
+    useColorModeValue,
+} from "@chakra-ui/react";
+import PropTypes from "prop-types";
 
-export default function AboutUsCard() {
+export default function AboutUsCard({
+    name,
+    age,
+    citizenship,
+    description,
+    image,
+}) {
+    const lightOrUltraDark = useColorModeValue("gray.200", "gray.900");
+
     return (
-        <Box borderWidth="1px" p={5} boxShadow="md" borderRadius="sm">
-            <Avatar src={Diego} size="2xl" borderWidth="1px" />
+        <Box
+            borderWidth="1px"
+            p={5}
+            boxShadow="md"
+            borderRadius="sm"
+            borderColor={lightOrUltraDark}
+        >
+            <Avatar src={image} size="2xl" borderWidth="1px" />
             <Box mt={2}>
                 <Heading as="h6" size="md">
-                    Diego Murillo Ferrer
+                    {name}
                 </Heading>
-                <Text color="gray.500">23 years old &bull; Colombian</Text>
+                <Text color="gray.500">
+                    {`${age} years old · ${citizenship}`}
+                </Text>
             </Box>
-            <Text mt={2}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Praesent malesuada finibus nunc, ut laoreet mauris lacinia id.
-                Nam sit amet nibh eu dolor placerat placerat.
-            </Text>
+            <Text mt={2}>{description}</Text>
         </Box>
     );
 }
+
+AboutUsCard.propTypes = {
+    name: PropTypes.string.isRequired,
+    age: PropTypes.string.isRequired,
+    citizenship: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+};

@@ -56,30 +56,6 @@ export default function NavBar() {
                             Home
                         </Link>
                         <Link
-                            href="/map"
-                            px={2}
-                            py={1}
-                            rounded="md"
-                            _hover={{
-                                textDecoration: "none",
-                                bg: lightOrDark,
-                            }}
-                        >
-                            Map
-                        </Link>
-                        <Link
-                            href="/news"
-                            px={2}
-                            py={1}
-                            rounded="md"
-                            _hover={{
-                                textDecoration: "none",
-                                bg: lightOrDark,
-                            }}
-                        >
-                            News
-                        </Link>
-                        <Link
                             href="about-us"
                             px={2}
                             py={1}
@@ -90,18 +66,6 @@ export default function NavBar() {
                             }}
                         >
                             About us
-                        </Link>
-                        <Link
-                            href="/contact-us"
-                            px={2}
-                            py={1}
-                            rounded="md"
-                            _hover={{
-                                textDecoration: "none",
-                                bg: lightOrDark,
-                            }}
-                        >
-                            Contact us
                         </Link>
                     </HStack>
                 </HStack>
@@ -123,30 +87,6 @@ export default function NavBar() {
                             Home
                         </Link>
                         <Link
-                            href="/map"
-                            px={2}
-                            py={1}
-                            rounded="md"
-                            _hover={{
-                                textDecoration: "none",
-                                bg: lightOrDark,
-                            }}
-                        >
-                            Map
-                        </Link>
-                        <Link
-                            href="/news"
-                            px={2}
-                            py={1}
-                            rounded="md"
-                            _hover={{
-                                textDecoration: "none",
-                                bg: lightOrDark,
-                            }}
-                        >
-                            News
-                        </Link>
-                        <Link
                             href="/about-us"
                             px={2}
                             py={1}
@@ -157,18 +97,6 @@ export default function NavBar() {
                             }}
                         >
                             About us
-                        </Link>
-                        <Link
-                            href="/"
-                            px={2}
-                            py={1}
-                            rounded="md"
-                            _hover={{
-                                textDecoration: "none",
-                                bg: lightOrDark,
-                            }}
-                        >
-                            Contact us
                         </Link>
                     </Stack>
                 </Box>

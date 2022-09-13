@@ -198,6 +198,7 @@ export default function Footer() {
                                 _focus={{ bg: "whiteAlpa.300" }}
                                 value={emailValue}
                                 onChange={handleChangeInputEmail}
+                                variant="filled"
                             />
                             {isError ? (
                                 <FormErrorMessage>
