@@ -1,7 +1,5 @@
 import React from "react";
 import {
-    Container,
-    useBreakpointValue,
     Heading,
     Accordion,
     AccordionButton,
@@ -15,22 +13,11 @@ import {
 } from "@chakra-ui/react";
 
 export default function Faq() {
-    const customMaxWidth = useBreakpointValue({
-        xl: "container.lg",
-        lg: "4xl",
-        md: "2xl",
-    });
-
-    const customPadding = useBreakpointValue({
-        xl: 24,
-        lg: 20,
-        md: 12,
-        base: 6,
-    });
-
     return (
-        <Container maxWidth={customMaxWidth} py={customPadding}>
-            <Heading as="h2">Frequently asked questions</Heading>
+        <Box mt={20}>
+            <Heading as="h2" mt={10}>
+                Frequently asked questions
+            </Heading>
             <Accordion mt={10} allowToggle>
                 <AccordionItem>
                     <AccordionButton>
@@ -207,6 +194,6 @@ export default function Faq() {
                     </AccordionPanel>
                 </AccordionItem>
             </Accordion>
-        </Container>
+        </Box>
     );
 }

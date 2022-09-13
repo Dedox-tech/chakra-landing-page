@@ -1,10 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import {
-    Container,
     Text,
     Heading,
-    useBreakpointValue,
     useColorModeValue,
     Button,
     ButtonGroup,
@@ -22,24 +20,11 @@ const CustomChakraBox = chakra(motion.div, {
 });
 
 export default function CustomHeader() {
-    const customMaxWidth = useBreakpointValue({
-        xl: "container.lg",
-        lg: "4xl",
-        md: "2xl",
-    });
-
-    const customPadding = useBreakpointValue({
-        xl: 24,
-        lg: 20,
-        md: 12,
-        base: 6,
-    });
-
     const tealLightOrTealDarkColor = useColorModeValue("teal.500", "teal.200");
     const whiteOrGrayColor = useColorModeValue("white", "gray.800");
 
     return (
-        <Container maxWidth={customMaxWidth} py={customPadding} centerContent>
+        <>
             <Heading
                 as="h1"
                 fontSize={{ base: "4xl", sm: "5xl", md: "6xl" }}
@@ -64,7 +49,7 @@ export default function CustomHeader() {
                 percent of the world population. It is a lot of people! Stay
                 informed about the status of Covid-19 vaccination with our app.
             </Text>
-            <ButtonGroup spacing={5} mt={10}>
+            <ButtonGroup spacing={5} mt={10} align="center">
                 <Button colorScheme="teal" size="lg">
                     Get started
                 </Button>
@@ -83,6 +68,6 @@ export default function CustomHeader() {
                     alt="Header image of doctors and pills"
                 />
             </CustomChakraBox>
-        </Container>
+        </>
     );
 }
