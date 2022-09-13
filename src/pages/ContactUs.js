@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import {
     Box,
@@ -15,10 +15,18 @@ import {
     Text,
 } from "@chakra-ui/react";
 import { EmailIcon } from "@chakra-ui/icons";
+import emailjs from '@emailjs/browser';
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 
+
 export default function ContactUs() {
+
+    // eslint-disable-next-line no-undef
+    const form = useRef();
+
+    emailjs.init("mXd60PXQzk7kHLUHu");
+
     const navigate = useNavigate();
 
     const [message, setMessage] = useState("");
@@ -38,6 +46,14 @@ export default function ContactUs() {
     };
 
     const onClickSend = () => {
+
+        emailjs.sendForm('vaccination_esl_bootcamp', 'template_lizt905', form.current, "mXd60PXQzk7kHLUHu")
+        .then((result)=>{
+            console.log(result.text);
+        }, (error)=> {
+            console.log(error.text)
+        });
+
         navigate("/confirmation");
     };
 
@@ -58,51 +74,57 @@ export default function ContactUs() {
                     If you have some quesion to ask us please provide us your
                     full name, email and a message.
                 </Text>
-                <FormControl mt={5}>
-                    <FormLabel>Full Name</FormLabel>
-                    <Input
-                        type="Text"
-                        onChange={setFullNameValue}
-                        values={fullName}
-                        size="lg"
-                    />
-                </FormControl>
-                <FormControl mt={5}>
-                    <FormLabel>Email address</FormLabel>
-                    <Input
-                        type="email"
-                        onChange={setEmailValue}
-                        values={email}
-                        size="lg"
-                    />
-                    <FormHelperText>
-                        We ll never share your email.
-                    </FormHelperText>
-                </FormControl>
-                <FormControl mt={5}>
-                    <FormLabel>Message</FormLabel>
-                    <Textarea
-                        placeholder="Write your message..."
-                        onChange={setMessageValue}
-                        values={message}
-                    />
-                </FormControl>
-                <FormControl>
-                    <Divider />
-                </FormControl>
-                {"\n"}
-                <FormControl align="right" m={5}>
-                    <Button
-                        bg={Footer.tealLightOrTealDarkColor}
-                        color={Footer.whiteOrGrayColor}
-                        leftIcon={<EmailIcon />}
-                        colorScheme="teal"
-                        _hover={{ bg: "teal.600" }}
-                        onClick={onClickSend}
-                    >
-                        Send
-                    </Button>
-                </FormControl>
+                <form ref={form} onSubmit={onClickSend}>
+                    <FormControl mt={5}>
+                        <FormLabel>Full Name</FormLabel>
+                        <Input
+                            type="Text"
+                            name='user_name'
+                            onChange={setFullNameValue}
+                            values={fullName}
+                            size="lg"
+                        />
+                    </FormControl>
+                    <FormControl mt={5}>
+                        <FormLabel>Email address</FormLabel>
+                        <Input
+                            type="email"
+                            name='user_email'
+                            onChange={setEmailValue}
+                            values={email}
+                            size="lg"
+                        />
+                        <FormHelperText>
+                            We ll never share your email.
+                        </FormHelperText>
+                    </FormControl>
+                    <FormControl mt={5}>
+                        <FormLabel>Message</FormLabel>
+                        <Textarea
+                            name='message'
+                            placeholder="Write your message..."
+                            onChange={setMessageValue}
+                            values={message}
+                        />
+                    </FormControl>
+                    <FormControl>
+                        <Divider />
+                    </FormControl>
+                    {"\n"}
+                    <FormControl align="right" m={5}>
+                        <Button
+                            bg={Footer.tealLightOrTealDarkColor}
+                            color={Footer.whiteOrGrayColor}
+                            leftIcon={<EmailIcon />}
+                            colorScheme="teal"
+                            _hover={{ bg: "teal.600" }}
+                            onClick={onClickSend}
+                        >
+                            Send
+                        </Button>
+                    </FormControl>
+                </form>
+
             </Container>
 
             <Footer />
