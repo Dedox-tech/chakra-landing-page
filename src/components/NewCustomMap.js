@@ -14,6 +14,9 @@ export default function NewCustomMap() {
                 targetElementID: "svgMap",
                 colorMax: "#974f8d",
                 colorMin: "#d3abce",
+                minZoom: 1,
+                maxZoom: 1,
+                colorNoData: "#eff0f0",
                 data: {
                     data: {
                         CanSino: {

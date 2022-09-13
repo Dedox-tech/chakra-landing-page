@@ -6,18 +6,8 @@ import {
     useColorModeValue,
     Button,
     ButtonGroup,
-    Image,
-    chakra,
     Highlight,
 } from "@chakra-ui/react";
-import { motion, isValidMotionProp } from "framer-motion";
-import HeaderImageLight from "../images/Image-Header-Light.svg";
-import HeaderImageDark from "../images/Image-Header-Dark.svg";
-
-const CustomChakraBox = chakra(motion.div, {
-    shouldForwardProp: (props) =>
-        isValidMotionProp(props) || props === "children",
-});
 
 export default function CustomHeader() {
     const tealLightOrTealDarkColor = useColorModeValue("teal.500", "teal.200");
@@ -57,17 +47,6 @@ export default function CustomHeader() {
                     Learn more
                 </Button>
             </ButtonGroup>
-            <CustomChakraBox
-                mt={16}
-                animate={{
-                    scale: [0.9, 1],
-                }}
-            >
-                <Image
-                    src={useColorModeValue(HeaderImageLight, HeaderImageDark)}
-                    alt="Header image of doctors and pills"
-                />
-            </CustomChakraBox>
         </>
     );
 }

@@ -1,10 +1,16 @@
 import React from "react";
-import { Box, Container, useBreakpointValue } from "@chakra-ui/react";
+import {
+    Box,
+    Container,
+    useBreakpointValue,
+    useColorModeValue,
+} from "@chakra-ui/react";
 import CustomHeader from "../components/CustomHeader";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Faq from "../components/Faq";
 import Features from "../components/Features";
+import NewCustomMap from "../components/NewCustomMap";
 
 export default function MainPage() {
     const customMaxWidth = useBreakpointValue({
@@ -20,6 +26,8 @@ export default function MainPage() {
         base: 6,
     });
 
+    const tealLightOrTealDarkColor = useColorModeValue("teal.500", "teal.300");
+
     return (
         <Box>
             <NavBar />
@@ -30,6 +38,9 @@ export default function MainPage() {
             >
                 <CustomHeader />
             </Container>
+            <Box bg={tealLightOrTealDarkColor}>
+                <NewCustomMap />
+            </Box>
             <Container maxWidth={customMaxWidth} py={customPadding}>
                 <Features />
                 <Faq />
