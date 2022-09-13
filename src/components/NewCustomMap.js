@@ -12,11 +12,10 @@ export default function NewCustomMap() {
             // eslint-disable-next-line no-unused-vars, prefer-const
             let myNewSvgMap = new svgMap({
                 targetElementID: "svgMap",
-                colorMax: "#974f8d",
-                colorMin: "#d3abce",
+                colorMax: "#C28ABA",
+                colorMin: "#D4ADCF",
                 minZoom: 1,
                 maxZoom: 1,
-                colorNoData: "#eff0f0",
                 data: {
                     data: {
                         CanSino: {

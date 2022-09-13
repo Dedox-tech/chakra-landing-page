@@ -1,12 +1,3 @@
-import Image1 from "../images/Image-1.png";
-import Image2 from "../images/Image-2.png";
-import Image3 from "../images/Image-3.png";
-import Image4 from "../images/Image-4.png";
-import Image5 from "../images/Image-5.png";
-import Image6 from "../images/Image-6.png";
-import Image7 from "../images/Image-7.png";
-import Image8 from "../images/Image-8.png";
-
 const newsData = [
     {
         country: "United States of America",
@@ -16,8 +7,6 @@ const newsData = [
         author: "William Raff",
         date: "Sep, 06, 2022",
         timeInMins: "4",
-        image: Image1,
-        imageAlt: "An ilustration of the Coronavirus",
     },
     {
         country: "China",
@@ -27,65 +16,16 @@ const newsData = [
         author: "Rose Hutchinson",
         date: "Sep, 06, 2022",
         timeInMins: "8",
-        image: Image2,
-        imageAlt: "A group of Covid-19 vaccines",
-    },
-    {
-        country: "Canada",
-        heading:
-            "What protection to expect from updated COVID vaccines this fall",
-        description:
-            "An updated Moderna vaccine is expected to roll out in Canada within days, and researchers will be watching how much added protection it offers.",
-        author: "Adam Miller",
-        date: "Sep, 05, 2022",
-        timeInMins: "6",
-        image: Image3,
-        imageAlt: "Biosecurity elements for covid-19",
     },
     {
         country: "United Kingdom",
         heading:
-            "First bivalent COVID-19 booster vaccine approved by UK medicines regulator",
+            "First bivalent booster vaccine approved by UK medicines regulator",
         description:
             "The adapted COVID-19 vaccine made by Moderna targets two different coronavirus variants: the original virus from 2020 and the Omicron variant.",
         author: "Larry Parker",
         date: "Sep, 04, 2022",
         timeInMins: "12",
-        image: Image4,
-        imageAlt: "A doctor getting ready for her shift",
-    },
-    {
-        country: "Switzerland",
-        heading: "Interim statement on COVID-19 vaccination for children",
-        description:
-            "WHO is reviewing the evidence on the need for and timing of vaccinating children and adolescents with available COVID-19 vaccines, which have received Emergency Use Listing.",
-        author: "World Health Organization",
-        date: "Sep, 03, 2022",
-        timeInMins: "16",
-        image: Image5,
-        imageAlt: "A child wearing a mask",
-    },
-    {
-        country: "United States of America",
-        heading: "Biden is preparing the end of free COVID-19 vaccines",
-        description:
-            "The federal budget for buying and distributing COVID-19 vaccines will run out as early as January. Those discussions have been ramped up late last month.",
-        author: "Lucy Vargas",
-        date: "Sep, 03, 2022",
-        timeInMins: "7",
-        image: Image6,
-        imageAlt: "A nurse giving an injection",
-    },
-    {
-        country: "Spain",
-        heading: "COVID-19 vaccine campaigns could be faster, industry says",
-        description:
-            "Speed is of the essence to protect citizens from new COVID-19 outbreaks this fall, but the process to distribute more vaccines must be accelerated, according to industry representatives.",
-        author: "Isabel Silva",
-        date: "Sep, 02, 2022",
-        timeInMins: "4",
-        image: Image7,
-        imageAlt: "A young girl washing her hands",
     },
     {
         country: "Israel",
@@ -95,8 +35,6 @@ const newsData = [
         author: "John Davis",
         date: "Aug, 31, 2022",
         timeInMins: "22",
-        image: Image8,
-        imageAlt: "A man wearing a mask. The man is a little worried",
     },
 ];
 

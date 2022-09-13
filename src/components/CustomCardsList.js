@@ -1,25 +1,35 @@
 import React from "react";
 import {
-    Container,
-    useBreakpointValue,
+    Box,
     Heading,
     SimpleGrid,
+    useColorModeValue,
+    Highlight,
 } from "@chakra-ui/react";
 import { v4 as uuidv4 } from "uuid";
 import CustomCard from "./CustomCard";
 import newsData from "../utils/newsData";
 
 export default function CustomCardsList() {
-    const customMaxWidth = useBreakpointValue({
-        xl: "container.lg",
-        lg: "4xl",
-        md: "2xl",
-    });
+    const tealLightOrTealDarkColor = useColorModeValue("teal.500", "teal.200");
+    const whiteOrGrayColor = useColorModeValue("white", "gray.800");
 
     return (
-        <Container maxWidth={customMaxWidth} centerContent mt="10" mb="5">
-            <Heading>Stay informed with the latest news!</Heading>
-            <SimpleGrid columns={{ base: 1, lg: 2 }} spacing="20" mt="10">
+        <Box mt="20">
+            <Heading>
+                <Highlight
+                    query="informed"
+                    styles={{
+                        px: "1.5",
+                        py: "0.5",
+                        bg: tealLightOrTealDarkColor,
+                        color: whiteOrGrayColor,
+                    }}
+                >
+                    Stay informed with our news
+                </Highlight>
+            </Heading>
+            <SimpleGrid columns={{ base: 1, lg: 2 }} spacing="10" mt="10">
                 {newsData.map((element) => {
                     const {
                         country,
@@ -46,6 +56,6 @@ export default function CustomCardsList() {
                     );
                 })}
             </SimpleGrid>
-        </Container>
+        </Box>
     );
 }

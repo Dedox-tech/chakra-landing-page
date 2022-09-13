@@ -15,6 +15,7 @@ import {
     chakra,
     useColorModeValue,
     Center,
+    Highlight,
 } from "@chakra-ui/react";
 import { motion, isValidMotionProp } from "framer-motion";
 import HeaderImageLight from "../images/Image-Header-Light.svg";
@@ -26,12 +27,41 @@ const CustomChakraBox = chakra(motion.div, {
 });
 
 export default function Faq() {
+    const tealLightOrTealDarkColor = useColorModeValue("teal.500", "teal.200");
+    const whiteOrGrayColor = useColorModeValue("white", "gray.800");
+
     return (
         <Box mt={20}>
-            <Heading as="h2" mt={10}>
-                Frequently asked questions
+            <Heading as="h2" mt={10} align="right">
+                <Highlight
+                    query="answers"
+                    styles={{
+                        px: "1.5",
+                        py: "0.5",
+                        bg: tealLightOrTealDarkColor,
+                        color: whiteOrGrayColor,
+                    }}
+                >
+                    Find the answers you need
+                </Highlight>
             </Heading>
             <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={10}>
+                <Center>
+                    <CustomChakraBox
+                        animate={{
+                            scale: [0.9, 1],
+                        }}
+                        p={10}
+                    >
+                        <Image
+                            src={useColorModeValue(
+                                HeaderImageLight,
+                                HeaderImageDark
+                            )}
+                            alt="Header image of doctors and pills"
+                        />
+                    </CustomChakraBox>
+                </Center>
                 <Box>
                     <Accordion mt={10} defaultIndex={[2]}>
                         <AccordionItem>
@@ -170,22 +200,6 @@ export default function Faq() {
                         </AccordionItem>
                     </Accordion>
                 </Box>
-                <Center>
-                    <CustomChakraBox
-                        animate={{
-                            scale: [0.9, 1],
-                        }}
-                        p={10}
-                    >
-                        <Image
-                            src={useColorModeValue(
-                                HeaderImageLight,
-                                HeaderImageDark
-                            )}
-                            alt="Header image of doctors and pills"
-                        />
-                    </CustomChakraBox>
-                </Center>
             </SimpleGrid>
         </Box>
     );

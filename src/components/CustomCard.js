@@ -1,7 +1,6 @@
 import React from "react";
 import {
     Box,
-    Image,
     Stack,
     Text,
     Heading,
@@ -17,22 +16,18 @@ function CustomCard({
     author,
     date,
     timeInMins,
-    image,
-    imageAlt,
 }) {
     const tealLightOrTealDarkColor = useColorModeValue("teal.500", "teal.200");
     const lightOrUltraDark = useColorModeValue("gray.200", "gray.900");
 
     return (
         <Box
-            maxW="410px"
             boxShadow="md"
             overflow="hidden"
             borderRadius="sm"
             borderWidth="1px"
             borderColor={lightOrUltraDark}
         >
-            <Image src={image} alt={imageAlt} objectFit="fill" />
             <Box p={6}>
                 <Stack>
                     <Text
@@ -68,8 +63,6 @@ CustomCard.propTypes = {
     author: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     timeInMins: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
-    imageAlt: PropTypes.string.isRequired,
 };
 
 export default CustomCard;

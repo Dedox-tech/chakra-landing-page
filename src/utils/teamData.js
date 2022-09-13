@@ -25,7 +25,7 @@ const teamData = [
         age: "24",
         citizenship: "Colombian",
         description:
-            "Bryan is a Data Engineer with practical experience in tools such as Python, SQL and Power Bi. He is a Control Engineer from Universidad Nacional de Colombia.",
+            "Data engineer with expertise in tools such as Python, SQL, AWS, Snowflake and Power BI. His academic background is control engineering and he has self-taught capabilities.",
         image: Bryan,
     },
     {

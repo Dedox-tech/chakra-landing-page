@@ -5,6 +5,7 @@ import {
     Heading,
     Text,
     Circle,
+    Highlight,
 } from "@chakra-ui/react";
 import {
     CalendarIcon,
@@ -19,10 +20,23 @@ export default function Features() {
     const lightOrUltraDark = useColorModeValue("gray.200", "gray.900");
     const whiteOrGrayColor = useColorModeValue("white", "gray.800");
     const tealLightOrTealDarkColor = useColorModeValue("teal.500", "teal.200");
+    const pinkLightOrDarkColor = useColorModeValue("#D4ADCF", "#C28ABA");
 
     return (
         <Box>
-            <Heading as="h2">Learn more about our features</Heading>
+            <Heading as="h2">
+                <Highlight
+                    query="Learn more"
+                    styles={{
+                        px: "1.5",
+                        py: "0.5",
+                        bg: tealLightOrTealDarkColor,
+                        color: whiteOrGrayColor,
+                    }}
+                >
+                    Learn more about our features
+                </Highlight>
+            </Heading>
             <SimpleGrid columns={{ base: 1, lg: 3 }} spacing={10} mt={10}>
                 <Box
                     boxShadow="md"
@@ -34,7 +48,7 @@ export default function Features() {
                     <Circle
                         w="48px"
                         h="48px"
-                        bg={tealLightOrTealDarkColor}
+                        bg={pinkLightOrDarkColor}
                         color={whiteOrGrayColor}
                     >
                         <CalendarIcon />
@@ -58,7 +72,7 @@ export default function Features() {
                     <Circle
                         w="48px"
                         h="48px"
-                        bg={tealLightOrTealDarkColor}
+                        bg={pinkLightOrDarkColor}
                         color={whiteOrGrayColor}
                     >
                         <ChatIcon />
@@ -82,7 +96,7 @@ export default function Features() {
                     <Circle
                         w="48px"
                         h="48px"
-                        bg={tealLightOrTealDarkColor}
+                        bg={pinkLightOrDarkColor}
                         color={whiteOrGrayColor}
                     >
                         <CalendarIcon />
@@ -106,7 +120,7 @@ export default function Features() {
                     <Circle
                         w="48px"
                         h="48px"
-                        bg={tealLightOrTealDarkColor}
+                        bg={pinkLightOrDarkColor}
                         color={whiteOrGrayColor}
                     >
                         <TimeIcon />
@@ -130,7 +144,7 @@ export default function Features() {
                     <Circle
                         w="48px"
                         h="48px"
-                        bg={tealLightOrTealDarkColor}
+                        bg={pinkLightOrDarkColor}
                         color={whiteOrGrayColor}
                     >
                         <MoonIcon />
@@ -154,7 +168,7 @@ export default function Features() {
                     <Circle
                         w="48px"
                         h="48px"
-                        bg={tealLightOrTealDarkColor}
+                        bg={pinkLightOrDarkColor}
                         color={whiteOrGrayColor}
                     >
                         <CheckIcon />

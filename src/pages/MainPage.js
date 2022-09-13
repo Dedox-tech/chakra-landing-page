@@ -11,6 +11,7 @@ import Footer from "../components/Footer";
 import Faq from "../components/Faq";
 import Features from "../components/Features";
 import NewCustomMap from "../components/NewCustomMap";
+import CustomCardsList from "../components/CustomCardsList";
 
 export default function MainPage() {
     const customMaxWidth = useBreakpointValue({
@@ -44,6 +45,7 @@ export default function MainPage() {
             <Container maxWidth={customMaxWidth} py={customPadding}>
                 <Features />
                 <Faq />
+                <CustomCardsList />
             </Container>
             <Footer />
         </Box>
