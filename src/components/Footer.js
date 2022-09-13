@@ -32,7 +32,7 @@ import {
 } from "@chakra-ui/react";
 import { BellIcon } from "@chakra-ui/icons";
 import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
-import validateErrorFooterForm from "../utils/validateErrorFooterForm";
+import validateEmailForm from "../utils/validateEmailForm";
 
 export default function Footer() {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -40,7 +40,7 @@ export default function Footer() {
     const [isLoading, setIsLoading] = useState(false);
     const [isSuccess, setIsSuccess] = useState(null);
     const [isFailure, setIsFailure] = useState(null);
-    const isError = !validateErrorFooterForm(emailValue);
+    const isError = !validateEmailForm(emailValue);
     const blackOrWhiteColor = useColorModeValue(
         "blackAlpha.100",
         "whiteAlpha.100"
@@ -198,6 +198,7 @@ export default function Footer() {
                                 _focus={{ bg: "whiteAlpa.300" }}
                                 value={emailValue}
                                 onChange={handleChangeInputEmail}
+                                variant="filled"
                             />
                             {isError ? (
                                 <FormErrorMessage>
