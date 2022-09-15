@@ -48,8 +48,8 @@ export default function Faq() {
             <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={10}>
                 <Center>
                     <CustomChakraBox
-                        animate={{
-                            scale: [0.9, 1],
+                        whileHover={{
+                            scale: 1.1,
                         }}
                         p={10}
                     >
@@ -63,7 +63,7 @@ export default function Faq() {
                     </CustomChakraBox>
                 </Center>
                 <Box>
-                    <Accordion mt={10} defaultIndex={[2]}>
+                    <Accordion mt={10} defaultIndex={[1]}>
                         <AccordionItem>
                             <AccordionButton>
                                 <Box flex="1" textAlign="left">

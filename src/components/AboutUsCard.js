@@ -32,7 +32,7 @@ export default function AboutUsCard({
                 borderWidth: "1px",
             }}
         >
-            <Link href={linkedin}>
+            <Link href={linkedin} target="_blank">
                 <Avatar src={image} size="2xl" borderWidth="1px" />
             </Link>
             <Box mt={2}>

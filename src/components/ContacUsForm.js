@@ -17,12 +17,19 @@ import {
     AlertDescription,
     CloseButton,
     Text,
+    chakra,
 } from "@chakra-ui/react";
+import { motion, isValidMotionProp } from "framer-motion";
 import { EmailIcon } from "@chakra-ui/icons";
 import ContactUsImageLight from "../images/Image-ContactUs-Light.svg";
 import ContactUsImageDark from "../images/Image-ContactUs-Dark.svg";
 import validateEmailForm from "../utils/validateEmailForm";
 import validateStringForm from "../utils/validateStringForm";
+
+const CustomChakraBox = chakra(motion.div, {
+    shouldForwardProp: (props) =>
+        isValidMotionProp(props) || props === "children",
+});
 
 export default function ContactUsForm() {
     const [fullName, setFullName] = useState("Noah Smith");
@@ -106,13 +113,20 @@ export default function ContactUsForm() {
     return (
         <SimpleGrid mt={10} mb={0} columns={{ base: 1, lg: 2 }} spacing={10}>
             <Center p={10}>
-                <Image
-                    src={useColorModeValue(
-                        ContactUsImageLight,
-                        ContactUsImageDark
-                    )}
-                    alt="Contact us ilustration about a phone app"
-                />
+                <CustomChakraBox
+                    whileHover={{
+                        scale: 1.1,
+                    }}
+                    p={5}
+                >
+                    <Image
+                        src={useColorModeValue(
+                            ContactUsImageLight,
+                            ContactUsImageDark
+                        )}
+                        alt="Contact us ilustration about a phone app"
+                    />
+                </CustomChakraBox>
             </Center>
             <Box>
                 <FormControl isInvalid={isErrorFullName}>
