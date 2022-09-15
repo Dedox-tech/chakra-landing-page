@@ -13,6 +13,22 @@ export default function CustomHeader() {
     const tealLightOrTealDarkColor = useColorModeValue("teal.500", "teal.200");
     const whiteOrGrayColor = useColorModeValue("white", "gray.800");
 
+    const handleClickGetStarted = () => {
+        window.scrollTo({
+            top: 500,
+            left: 0,
+            behavior: "smooth",
+        });
+    };
+
+    const handleClickLearnMore = () => {
+        window.scrollTo({
+            top: 2500,
+            left: 0,
+            behavior: "smooth",
+        });
+    };
+
     return (
         <>
             <Heading
@@ -40,10 +56,19 @@ export default function CustomHeader() {
                 informed about the status of Covid-19 vaccination with our app.
             </Text>
             <ButtonGroup spacing={5} mt={10} align="center">
-                <Button colorScheme="teal" size="lg">
+                <Button
+                    colorScheme="teal"
+                    size="lg"
+                    onClick={handleClickGetStarted}
+                >
                     Get started
                 </Button>
-                <Button colorScheme="teal" size="lg" variant="outline">
+                <Button
+                    colorScheme="teal"
+                    size="lg"
+                    variant="outline"
+                    onClick={handleClickLearnMore}
+                >
                     Learn more
                 </Button>
             </ButtonGroup>
