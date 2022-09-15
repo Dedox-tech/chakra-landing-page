@@ -27,6 +27,10 @@ function CustomCard({
             borderRadius="sm"
             borderWidth="1px"
             borderColor={lightOrUltraDark}
+            _hover={{
+                borderColor: tealLightOrTealDarkColor,
+                borderWidth: "1px",
+            }}
         >
             <Box p={6}>
                 <Stack>
