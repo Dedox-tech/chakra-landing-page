@@ -8,7 +8,8 @@ export default function AboutUsCardsLists() {
     return (
         <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={10} my={10}>
             {teamData.map((element) => {
-                const { name, age, citizenship, description, image } = element;
+                const { name, age, citizenship, description, image, linkedin } =
+                    element;
                 return (
                     <AboutUsCard
                         name={name}
@@ -16,6 +17,7 @@ export default function AboutUsCardsLists() {
                         citizenship={citizenship}
                         description={description}
                         image={image}
+                        linkedin={linkedin}
                         key={uuidv4()}
                     />
                 );

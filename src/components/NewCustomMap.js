@@ -20,42 +20,42 @@ export default function NewCustomMap() {
                     data: {
                         CanSino: {
                             name: "Cansino Vaccines",
-                            format: "{0} dosis",
+                            format: "{0} doses",
                             thousandSeparator: ",",
                         },
                         Moderna: {
                             name: "Moderna Vaccines",
-                            format: "{0} dosis",
+                            format: "{0} doses",
                             thousandSeparator: ",",
                         },
                         "Oxford/AstraZeneca": {
                             name: "Astrazeneca Vaccines",
-                            format: "{0} dosis",
+                            format: "{0} doses",
                             thousandSeparator: ",",
                         },
                         "Pfizer/BioNTech": {
                             name: "Pfizer Vaccines",
-                            format: "{0} dosis",
+                            format: "{0} doses",
                             thousandSeparator: ",",
                         },
                         "Sinopharm/Beijing": {
                             name: "Sinopharm Vaccines",
-                            format: "{0} dosis",
+                            format: "{0} doses",
                             thousandSeparator: ",",
                         },
                         "Sputnik V": {
                             name: "Sputnik V Vaccines",
-                            format: "{0} dosis",
+                            format: "{0} doses",
                             thousandSeparator: ",",
                         },
                         "Johnson&Johnson": {
                             name: "Johnson & Johnson Vaccines",
-                            format: "{0} dosis",
+                            format: "{0} doses",
                             thousandSeparator: ",",
                         },
                         Sinovac: {
                             name: "Sinovac Vaccines",
-                            format: "{0} dosis",
+                            format: "{0} doses",
                             thousandSeparator: ",",
                         },
                     },

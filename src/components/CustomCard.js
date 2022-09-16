@@ -6,6 +6,7 @@ import {
     Heading,
     useColorModeValue,
     Avatar,
+    Link,
 } from "@chakra-ui/react";
 import PropTypes from "prop-types";
 
@@ -16,6 +17,7 @@ function CustomCard({
     author,
     date,
     timeInMins,
+    id,
 }) {
     const tealLightOrTealDarkColor = useColorModeValue("teal.500", "teal.200");
     const lightOrUltraDark = useColorModeValue("gray.200", "gray.900");
@@ -27,6 +29,10 @@ function CustomCard({
             borderRadius="sm"
             borderWidth="1px"
             borderColor={lightOrUltraDark}
+            _hover={{
+                borderColor: tealLightOrTealDarkColor,
+                borderWidth: "1px",
+            }}
         >
             <Box p={6}>
                 <Stack>
@@ -39,9 +45,11 @@ function CustomCard({
                     >
                         {country}
                     </Text>
-                    <Heading fontFamily="body" fontSize="2xl">
-                        {heading}
-                    </Heading>
+                    <Link href={`/news/${id}`}>
+                        <Heading fontFamily="body" fontSize="2xl">
+                            {heading}
+                        </Heading>
+                    </Link>
                     <Text mt="4">{description}</Text>
                 </Stack>
                 <Stack mt="5" direction="row" spacing="4">
@@ -63,6 +71,7 @@ CustomCard.propTypes = {
     author: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     timeInMins: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
 };
 
 export default CustomCard;
