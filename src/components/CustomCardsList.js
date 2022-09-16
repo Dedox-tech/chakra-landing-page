@@ -38,8 +38,7 @@ export default function CustomCardsList() {
                         author,
                         date,
                         timeInMins,
-                        image,
-                        imageAlt,
+                        id,
                     } = element;
                     return (
                         <CustomCard
@@ -49,8 +48,7 @@ export default function CustomCardsList() {
                             author={author}
                             date={date}
                             timeInMins={timeInMins}
-                            image={image}
-                            imageAlt={imageAlt}
+                            id={id}
                             key={uuidv4()}
                         />
                     );
